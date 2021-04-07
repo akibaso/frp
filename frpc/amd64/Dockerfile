@@ -1,12 +1,12 @@
 # 基础镜像
 FROM amd64/alpine:3.10
 # 作者
-LABEL maintainer="ryan <me@ryana.cn>"
+LABEL maintainer="Given"
 # # 定义构建参数
-ENV FRP_VERSION 0.33.0
+ENV FRP_VERSION 0.29.0
 # 构建镜像
 RUN cd /root \
-    &&  wget --no-check-certificate -c https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz \
+    &&  wget --no-check-certificate -c https://cdn.zerodream.net/frp/frp_${FRP_VERSION}_linux_amd64.tar.gz \
     &&  tar zxvf frp_${FRP_VERSION}_linux_amd64.tar.gz  \
     &&  cd frp_${FRP_VERSION}_linux_amd64/ \
     &&  cp frpc /usr/bin/ \
